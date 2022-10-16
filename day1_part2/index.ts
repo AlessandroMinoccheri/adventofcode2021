@@ -8,23 +8,29 @@ const fetchData = async (): Promise<string> => {
     )
 }
 
-console.log('Advent of code 2021: day 1');
+console.log('Advent of code 2021: day 2');
 
 async function measure() {
     const measurementsData = await fetchData()
     const measurements = measurementsData.split("\n");
 
     let increasedTime: number = 0
+    let prevMeasurement: number = 0
     
     for (const measurementIndex in measurements) {
         const index = parseInt(measurementIndex)
+
+        const sum = parseInt(measurements[index]) + parseInt(measurements[index + 1]) + parseInt(measurements[index + 2])
+        
         if (index === 0) {
+            prevMeasurement = sum
             continue
         }
-
-        if (parseInt(measurements[index]) > parseInt(measurements[index - 1])) {
+        if (sum > prevMeasurement) {
             increasedTime++
         }
+
+        prevMeasurement = sum
     }
 
     console.log("Measurements increased " + increasedTime.toString() + " times")

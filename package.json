@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "day1": "tsc && node day1/index.js",
+    "day1_part2": "tsc && node day1_part2/index.js",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [],
