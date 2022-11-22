@@ -11,6 +11,7 @@
     "day2_part2": "tsc && node day2_part2/index.js",
     "day3": "tsc && node day3/index.js",
     "day3_part2": "tsc && node day3_part2/index.js",
+    "day4": "tsc && node day4/index.js",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [],
