@@ -13,6 +13,7 @@
     "day3_part2": "tsc && node day3_part2/index.js",
     "day4": "tsc && node day4/index.js",
     "day4_part2": "tsc && node day4_part2/index.js",
+    "day5": "tsc && node day5/index.js",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [],

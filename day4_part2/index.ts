@@ -64,6 +64,9 @@ function extractNumbers(numbersToExtract: string[], boards: string[][][]): [stri
             return board.some(boardElement => {
                 if (boardElement.length > 1) {
                     if (boardElement.every(element => numbersExtracted.indexOf(element) > -1)) {
+                        if (exists(board, winners)) {
+                            return false
+                        }
                         winners.push(board)
                         return true
                     }
@@ -85,6 +88,9 @@ function extractNumbers(numbersToExtract: string[], boards: string[][][]): [stri
 
                     if (column.length > 1) {
                         if (column.every(element => numbersExtracted.indexOf(element) > -1)) {
+                            if (exists(board, winners)) {
+                                return false
+                            }
                             winners.push(board)
                             return true;
                         }
